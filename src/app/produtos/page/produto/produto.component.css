@@ -1,0 +1,5 @@
+.text-center_gap{
+    gap:3rem;
+    display: flex;
+    justify-content: center;
+}

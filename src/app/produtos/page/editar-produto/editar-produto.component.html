@@ -1,0 +1,40 @@
+<h1 class="mt-3 mb-3">Edição de produtos</h1>
+
+<form [formGroup]="produtoForm" (submit)="salvarEdicao()">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome do produto</label>
+          <input type="text" class="form-control" id="nome" formControlName="nome" [ngClass]="{'is-invalid': produtoForm.controls.nome.invalid && produtoForm.controls.nome.touched}">
+          <!-- Mensagem de erro se o campo nome for inválido e tocado -->
+          <div *ngIf="produtoForm.controls.nome.invalid && produtoForm.controls.nome.touched" class="invalid-feedback">
+            O nome do produto é obrigatório.
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="preco" class="form-label">Preço do produto</label>
+          <input type="text" class="form-control" id="preco" formControlName="preco" [ngClass]="{'is-invalid': produtoForm.controls.preco.invalid && produtoForm.controls.preco.touched}"  currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" >
+          <!-- Mensagem de erro se o campo preço for inválido e tocado -->
+          <div *ngIf="produtoForm.controls.preco.invalid && produtoForm.controls.preco.touched" class="invalid-feedback">
+            O preço do produto deve ser um número maior ou igual a zero.
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="codigoBarras" class="form-label">Codigo de Barras</label>
+          <input type="number" class="form-control" id="codigoBarras" formControlName="codigoBarras" [ngClass]="{'is-invalid': produtoForm.controls.codigoBarras.invalid && produtoForm.controls.codigoBarras.touched}">
+          <!-- Mensagem de erro se o campo código de barras for inválido e tocado -->
+          <div *ngIf="produtoForm.controls.codigoBarras.invalid && produtoForm.controls.codigoBarras.touched" class="invalid-feedback">
+            O código de barras deve ser um número maior ou igual a zero.
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-secondary me-1" routerLink="/produtos">Voltar</a>
+    <button class="btn btn-primary" type="submit">Editar</button>
+  </div>
+</form>

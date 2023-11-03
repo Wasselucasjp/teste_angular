@@ -1,0 +1,14 @@
+h2{
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.collapse{
+    margin: 1rem 2rem ;
+}
+
+a{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+}
