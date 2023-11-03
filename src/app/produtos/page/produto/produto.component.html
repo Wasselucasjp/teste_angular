@@ -1,0 +1,29 @@
+<h1 class="mt-3 mb-3">Produtos</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome do produtos</th>
+      <th scope="col">Preço do produto</th>
+      <th scope="col">Código do produto</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos">
+      <th scope="row">{{ produto.id }}</th>
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.preco }}</td>
+      <td>{{ produto.codigoBarras }}</td>
+      <td class="text-center">        
+      </td>
+      <td class="text-center text-center_gap">
+        <button type="button" class="btn btn-danger btn-sm" (click)="remover(produto.id)">Deletar</button>
+        <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/produtos/editar', produto.id]" routerLinkActive="active" >Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-primary" routerLink="/produtos/cadastrar">Cadastrar</a>
