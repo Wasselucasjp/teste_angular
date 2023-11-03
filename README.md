@@ -1,27 +1,45 @@
-# AngularTeste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
-
-## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Projeto crud com Angular 15 - Sistema para cadastro de produtos
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Funcionalidades
 
-## Further help
+- Aplicação para leitura de produtos
+- Cadastro de novos produtos
+- Atulização de produtos
+- Exclusão de produtos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Para rodar a aplicação
+
+```bash
+  Baixe o arquivo Zip
+```
+```bash
+  Descompacte o arquivo.Zip
+```
+```bash
+  Abra na sua IDE de preferêcia
+```
+```bash
+  Abra o terminal e coloque o comando npm install - para baixar o node_modules
+```
+```bash
+  Depois execute o comando ng s -ou- ng serve
+  Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files
+```
+## Referência
+
+ - [Projeto back-end da aplicação](https://github.com/Wasselucasjp/treinamento-minsait)
+ - [Utilizado sweetalert2 para confirmação de requisição](https://sweetalert2.github.io/v10.html)
+ - [Ultilizado getBosttrap5 para criaçao de componentes](https://getbootstrap.com/)
+ - [Ultilizado validators do FormGroup para validar campus de input](https://www.digitalocean.com/community/tutorials/angular-custom-validation)
